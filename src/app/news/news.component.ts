@@ -16,6 +16,7 @@ export class NewsComponent implements OnInit {
     // technology news articles
     this.articles$ = this.newsapi.getTopHeadlines();
   }
+ 
 }
 
 

@@ -1,10 +1,16 @@
   <div class="container">
-    <div *ngFor="let article of articles$ | async |slice:0:1">
+    <div *ngFor="let article of  articles$ | async |slice:0:1">
       <div class="jumbotron p-4 p-md-5 text-white rounded bg-dark">
-        <div class="col-md-6 px-0" >
-          <h1 class="display-4 font-italic">{{article.title}}</h1>
-          <p class="lead my-3">{{article.description}}</p>
-          <p class="lead mb-0"><a href={{article.url}} class="text-white font-weight-bold">Continue reading...</a></p>
+        <div class="row">
+          <div class="col-md-6 px-0">
+            <h1 class="display-4 font-italic">{{article.title}}</h1>
+            <p class="lead my-3">{{article.description}}</p>
+            <p class="lead mb-0"><a href={{article.url}} class="text-white font-weight-bold" target="_blank">Haberi
+                oku....</a></p>
+          </div>
+          <div class="col-md-6">
+            <img src={{article.urlToImage}} width="100%" height="100%">
+          </div>
         </div>
       </div>
     </div>
@@ -15,7 +21,7 @@
           <div class="col p-4 d-flex flex-column position-static">
             <h5 class="mb-2">{{ article.title }}</h5>
             <p class="card-text mb-auto">{{ article.description }}</p>
-            <a href={{article.url}} class="stretched-link">Continue reading</a>
+            <a href={{article.url}} class="stretched-link" target="_blank">Haberi oku....</a>
           </div>
           <div class="col-auto d-none d-lg-block">
             <img class="bd-placeholder-img stretched-link" width="200" height="250" src={{article.urlToImage}} />
@@ -41,7 +47,7 @@
               <p>{{ article.description }}</p>
               <hr>
               <p>{{ article.content }}</p>
-              <a href={{article.url}}>Continue reading</a>
+              <a href={{article.url}} target="_blank">Haberi oku....</a>
           </div><!-- /.blog-post -->
         </div>
         <nav class="blog-pagination">
@@ -51,26 +57,24 @@
       </div><!-- /.blog-main -->
       <aside class="col-md-4 blog-sidebar">
         <div class="p-4 mb-3 bg-light rounded">
-          <h4 class="font-italic">About</h4>
+          <h4 class="font-italic">Hakkında</h4>
           <p class="mb-0"><em>Turkey News</em> reklamsız ve sade bir gazete deneyimi yaşatmak için ortaya çıkmıştır.
             Keyifli okumalar.</p>
         </div>
         <div class="p-4">
-          <h4 class="font-italic">Elsewhere</h4>
+          <h4 class="font-italic">Sosyal Medya</h4>
           <ol class="list-unstyled">
-            <li><a href="https://github.com/Erenkara/turkeynews">GitHub</a></li>
-            <li><a href="https://twitter.com/turkeynewsco">Twitter</a></li>
-            <li><a href="https://www.instagram.com/turkeynewsco/">Instagram</a></li>
-            <li><a href="turkeynewsco.mail@gmail.com">Mail</a></li>
+            <li><a href="https://github.com/Erenkara/turkeynews" target="_blank">GitHub</a></li>
+            <li><a href="https://twitter.com/turkeynews_co" target="_blank">Twitter</a></li>
+            <li><a href="https://www.instagram.com/turkeynews_co/" target="_blank">Instagram</a></li>
+            <li><a href="turkeynewsco.mail@gmail.com" target="_blank">Mail</a></li>
           </ol>
         </div>
       </aside><!-- /.blog-sidebar -->
     </div><!-- /.row -->
   </main><!-- /.container -->
   <footer class="blog-footer">
-    <p>Blog template built for <a href="https://getbootstrap.com/">Bootstrap</a> by <a
-        href="https://twitter.com/mdo">@mdo</a> <br>  Site built by <a href="https://twitter.com/_karaeren">@erenkara</a>.</p>
-    <p>
-      <a href="#">Back to top</a>
-    </p>
+    <p>Blog template built for <a href="https://getbootstrap.com/" target="_blank">Bootstrap</a> by <a
+        href="https://twitter.com/mdo">@mdo</a> <br> Site built by <a href="https://twitter.com/_karaeren"
+        target="_blank">@erenkara</a>.</p>
   </footer>
