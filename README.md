@@ -1,4 +1,9 @@
 # Turkeynews
+source code of https://turkeynews.co/news
+# License
+GNU General Public License
+
+# Turkeynews
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
